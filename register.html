@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>registr</title>
+	<style>
+		.text,
+		.button
+		{
+			margin: 2px;
+			display: block;
+		}
+		#help{
+			position: absolute;
+			margin-top: 30px;
+			margin-left: 30px;
+			padding: 10px;
+			border: 2px solid red;
+			background-color: rgba(255,0,0,.7);
+			color: #fff;
+			display: none;
+		}
+		td{
+			border: 1px solid red;
+		}
+		.col_r{
+			background-color: #red;
+		}
+		.col_w{
+			background-color: #white;
+		}
+	</style>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.js"></script>
+	
+</head>
+<body onload="digitalWatch()"> 
+	<div id="help">
+		<p>Текущее время</p>
+	</div>
+	<p id="digital_watch" style="color: #f00; font-size: 120%; font-weight: bold;" onmouseover="mo();" onmouseout="mout();" ></p>
+	<form action="#" method="post" OnSubmit='return Validate(this);'>
+		<label for="" class="block">
+			<span class="text">nick</span>
+			<input type="text" id="nick">	
+		</label>
+		<label for="" class="block">
+			<span class="text">email</span>
+			<input type="text" id="email">	
+		</label>
+		<label for="" class="block">
+			<span class="text">password</span>
+			<input type="text" id="pass">	
+		</label>
+		<label for="" class="block">
+			<span class="text">re-password</span>
+			<input type="text" id="re-pass">	
+		</label>
+		<input class="button" type="submit">
+	</form>
+	<div class="info" onclick="show_info();" >
+		<h1>
+			information
+		</h1>
+	</div>
+	<div id="info-more">
+		<p>parol' dolzhen bit' bolee 6 simvolov</p>
+		<p>v email nozhno nalichie @</p>
+		<p>paroli dolzhni sovpadat'</p>
+	</div>
+	<br>
+	<br>
+	<table class="tabl">
+		<tr id="active_1" style="background-color:  red;" onclick="mouse_move(this);">
+			<td id="active_1_1">для дететей</td>
+			<td>10</td>
+			<td id="active_1_3">пусто</td>
+		</tr>
+		<tr id="active_2" style="background-color:  white;" onclick="mouse_move(this);">
+			<td id="active_2_1">для взрослых</td>
+			<td>20</td>
+			<td id="active_2_3">пусто</td>
+		</tr>
+		<tr id="active_3" style="background-color:  white;" onclick="mouse_move(this);">
+			<td id="active_2_1">для компании</td>
+			<td>15 с человека</td>
+			<td id="active_3_3">пусто</td>
+		</tr>
+	</table>
+
+	<<input type="submit" name="up" value=" up" onclick="move(1);">
+	<input type="submit" name="down" value="down" onclick="move(-1);">
+	<input type="submit" name="add" value="add" onclick="add();">
+	<input type="submit" name="buy" value="buy" onclick="canculate();">
+
+</body>
+</html>

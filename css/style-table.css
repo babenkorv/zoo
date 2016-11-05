@@ -1,0 +1,26 @@
+table{
+	background-color: #030;
+	width: 700px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+}
+
+.caption{
+	font-size: 30px;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	text-transform: uppercase;
+}
+
+.title{
+	padding-bottom: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+td{
+	font-size: 14px;
+	text-transform: uppercase;
+	
+}
